@@ -1,0 +1,35 @@
+
+:root{
+
+    --primary_light: #8cac91;
+    --bg_color: rgb(252, 250, 241);
+    --text_primary: #21442c;
+    --text_secondary: #4d6755;
+    --font-primary: 'DM Sans', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: var(--bg_color);
+    color: var(--text_primary);
+    font-family: var(--font-primary);
+}
+
+.crud{
+    width: 80%;
+    margin: auto;
+}
+.head{
+    text-align: center;
+    margin: 15px 0;
+}
+.head h4 {
+    color: var(--text_secondary);
+}
+.head p {
+    color: var(--primary_light);
+}
