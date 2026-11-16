@@ -15,60 +15,140 @@
 </head>
 <body>
 
-    <div class="crud">
-        <div class="head">
+<div class="crud">
+    <div class="head">
             <h2> PRODY </h2>
             <h4> PRODUCT MANAGEMENT </h4>
             <p> A simple space to manage, organize and track your products. </p>
-        </div>
-
-        <hr>
-
-        
-        <div class="view">
-            
-            <div class="view-container">
-                <h2 class="title"> Dashboard Overview </h2>
-                
-                <div class="view-card">
-                    <h4>Total Products</h4>
-                    <h2>128</h2>
-                </div>
-
-                <div class="view-card">
-                    <h4>Total Categories</h4>
-                    <h2>12</h2>
-                </div>
-
-                <div class="view-card">
-                    <h4>Inventory Value</h4>
-                    <h2>$12.4k</h2>
-                </div>
-
-                <div class="view-card">
-                    <h4>Total Stock</h4>
-                    <h2>845</h2>
-                </div>
-            </div>
-            
-        </div>
-        
-        <div class="inputs">
-
-        </div>
-
-        <div class="outputs">
-
-        </div>
-
-        
-
-
     </div>
 
+    <hr>
 
+    <div class="view">
+            
+        <div class="view-container">
+            <h2 class="title"> Dashboard Overview </h2>
+                
+            <div class="view-card">
+                <h4>Total Products</h4>
+                <h2>128</h2>
+            </div>
+
+            <div class="view-card">
+                <h4>Total Categories</h4>
+                <h2>12</h2>
+            </div>
+
+            <div class="view-card">
+                <h4>Inventory Value</h4>
+                <h2>$12.4k</h2>
+            </div>
+
+            <div class="view-card">
+                <h4>Total Stock</h4>
+                <h2>845</h2>
+            </div>
+        </div>
+
+        <div class="products">
+            <div class="titleSection">
+                <h2 class="prtitle"> Product Management </h2>
+                <h4 class="sub-title"> Manage your products, update details and control your inventory </h4>
+            </div>
+            <h4 class="prtitle">Add New Product </h4>
+            <div class="inputs">
+                <input type="text" id="nameOfproduct" placeholder=" Name Of Product ">
+                <div class="price">
+                    <input type="number" id="price" placeholder=" Price ">
+                    <input type="number" id="taxes" placeholder=" Taxes ">
+                    <input type="number" id="ads" placeholder=" Ads ">
+                    <input type="number" id="discount" placeholder=" Discount ">
+                    <small id="total"> 223 </small>
+                </div>
+                <input type="number" id="count" placeholder=" Number Of Products ">
+                <input type="text" id="category" placeholder=" Name Of Category ">
+                <button id="submit"> Create </button>
+            </div>
+
+            <div class="outputs">
+                <h4 class="prtitle"> Product List </h4>
+                <input type="text" id="search" placeholder=" Search for a product... ">
+                <div class="btn_search">
+                    <button id="searchTitle"> Search By Title </button>
+                    <button id="searchCategory"> Search By Category </button>
+                </div>
+
+                <table>
+                    <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Taxes</th>
+                        <th>Ads</th>
+                        <th>Discount</th>
+                        <th>Category</th>
+                        <th>Total</th>
+                        <th>Actions</th>
+                    </tr>
+                    <tbody>
+                        <!-- Fake Data -->
+                        <tr>
+                        <td>Samsung</td>
+                        <td>200$</td>
+                        <td>44$</td>
+                        <td>20$</td>
+                        <td>20%</td>
+                        <td>TV</td>
+                        <td>230</td>
+                        <td>
+                            <div class="Actions">
+                                <button id="edit"> UPDATE </button>
+                                <button id="delete"> DELETE </button>
+                            </div> 
+                        </td>
+                        </tr>
+
+                        <tr>
+                        <td>Samsung</td>
+                        <td>200$</td>
+                        <td>44$</td>
+                        <td>20$</td>
+                        <td>20%</td>
+                        <td>TV</td>
+                        <td>230</td>
+                        <td>
+                            <div class="Actions">
+                                <button id="edit"> UPDATE </button>
+                                <button id="delete"> DELETE </button>
+                            </div> 
+                        </td>
+                        </tr>
+
+                        <tr>
+                        <td>Samsung</td>
+                        <td>200$</td>
+                        <td>44$</td>
+                        <td>20$</td>
+                        <td>20%</td>
+                        <td>TV</td>
+                        <td>230</td>
+                        <td>
+                            <div class="Actions">
+                                <button id="edit"> UPDATE </button>
+                                <button id="delete"> DELETE </button>
+                            </div> 
+                        </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>  
+
+</div>
+    
     <script src="main.js"></script>
-
     
 </body>
 </html>
