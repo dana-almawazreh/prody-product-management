@@ -171,7 +171,11 @@ button{
     flex: 1;
     font-size: 14px;
 }
-
+#deleteAll button{
+    width: 100%;
+    margin: 12px 0;
+    padding: 10px;
+}
 table{
     width: 100%;
     text-align: center;
@@ -185,8 +189,10 @@ table th{
 th,td{
     padding: 6px;
 }
+
 .Actions #delete {
     background: #f32a18;
+    margin: 4px;
 }
 .Actions #delete:hover {
     background: #f2594b;

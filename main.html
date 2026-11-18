@@ -59,11 +59,11 @@
             <div class="inputs">
                 <input type="text" id="nameOfproduct" placeholder=" Name Of Product ">
                 <div class="price">
-                    <input type="number" id="price" placeholder=" Price ">
-                    <input type="number" id="taxes" placeholder=" Taxes ">
-                    <input type="number" id="ads" placeholder=" Ads ">
-                    <input type="number" id="discount" placeholder=" Discount ">
-                    <small id="total"> 223 </small>
+                    <input onkeyup="getTotal()" type="number" id="price" placeholder=" Price ">
+                    <input onkeyup="getTotal()" type="number" id="taxes" placeholder=" Taxes ">
+                    <input onkeyup="getTotal()" type="number" id="ads" placeholder=" Ads ">
+                    <input onkeyup="getTotal()" type="number" id="discount" placeholder=" Discount ">
+                    <small id="total">  </small>
                 </div>
                 <input type="number" id="count" placeholder=" Number Of Products ">
                 <input type="text" id="category" placeholder=" Name Of Category ">
@@ -72,72 +72,28 @@
 
             <div class="outputs">
                 <h4 class="prtitle"> Product List </h4>
-                <input type="text" id="search" placeholder=" Search for a product... ">
+                <input onkeyup="search(this.value)" type="text" id="search" placeholder=" Search for a product... ">
                 <div class="btn_search">
-                    <button id="searchTitle"> Search By Title </button>
-                    <button id="searchCategory"> Search By Category </button>
+                    <button onclick="getSearchMood(this.id)" id="searchTitle"> Search By Name </button>
+                    <button onclick="getSearchMood(this.id)" id="searchCategory"> Search By Category </button>                    
                 </div>
-
+                <div id="deleteAll"></div>   
+                
                 <table>
                     <tr>
+                        <th></th>
                         <th>Product</th>
                         <th>Price</th>
                         <th>Taxes</th>
                         <th>Ads</th>
                         <th>Discount</th>
+                        <th>Count</th>
                         <th>Category</th>
                         <th>Total</th>
                         <th>Actions</th>
                     </tr>
-                    <tbody>
-                        <!-- Fake Data -->
-                        <tr>
-                        <td>Samsung</td>
-                        <td>200$</td>
-                        <td>44$</td>
-                        <td>20$</td>
-                        <td>20%</td>
-                        <td>TV</td>
-                        <td>230</td>
-                        <td>
-                            <div class="Actions">
-                                <button id="edit"> UPDATE </button>
-                                <button id="delete"> DELETE </button>
-                            </div> 
-                        </td>
-                        </tr>
-
-                        <tr>
-                        <td>Samsung</td>
-                        <td>200$</td>
-                        <td>44$</td>
-                        <td>20$</td>
-                        <td>20%</td>
-                        <td>TV</td>
-                        <td>230</td>
-                        <td>
-                            <div class="Actions">
-                                <button id="edit"> UPDATE </button>
-                                <button id="delete"> DELETE </button>
-                            </div> 
-                        </td>
-                        </tr>
-
-                        <tr>
-                        <td>Samsung</td>
-                        <td>200$</td>
-                        <td>44$</td>
-                        <td>20$</td>
-                        <td>20%</td>
-                        <td>TV</td>
-                        <td>230</td>
-                        <td>
-                            <div class="Actions">
-                                <button id="edit"> UPDATE </button>
-                                <button id="delete"> DELETE </button>
-                            </div> 
-                        </td>
-                        </tr>
+                    <tbody id="tbody">
+                        
 
                     </tbody>
                 </table>
