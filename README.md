@@ -1,40 +1,46 @@
 PRODY – Product Management Dashboard
 
-A modern and simple product management dashboard built using HTML, CSS, and JavaScript.
+A modern and responsive product management dashboard built using **HTML, CSS, and JavaScript
 
-PRODY is a CRUD application that allows users to manage products through a clean and user-friendly interface.
+PRODY is a frontend CRUD application that provides a simple and intuitive interface for managing products, tracking inventory, and organizing product information.
 
-Features:
+----------
+Features
 
--Create: Add new products with their details.
--Read: Display and view all products.
--Update: Edit existing product information.
--Delete: Remove products from the inventory.
--Search: Find products easily.
+-> Create: Add new products with their details, including name, price, taxes, ads, discount,          quantity, and category.
+-> Read: Display all products in an organized table.
+-> Update: Edit existing product information.
+-> Delete: Remove individual products or clear the entire inventory.
+-> Search: Find products by name or category.
+-> Dynamic Dashboard: Display real-time statistics, including total products, categories,             stock, and inventory value.
+-> Total Calculation: Automatically calculate product prices based on price, taxes, ads, and discounts.
+-> Local Storage: Save product data in the browser to preserve it between sessions.
 
--Responsive Design: A clean interface across different screen sizes.
+----------
+Technologies Used
 
-Technologies Used:
+- HTML5
+- CSS3
+- JavaScript (Vanilla JS)
+- Browser LocalStorage
 
--HTML
--CSS
--JavaScript 
+----------
+Project Structure
 
-Project Structure:
+prody-product-management
+/ index.html
+/ main.css
+/ main.js
+/ assets/
+/ README.md
 
-prody-product-management/
-│
-├── main.html
-├── main.css
-├── main.js
-├── assets/
-│   
-└── README.md
+----------
+Project Goal
 
+This project was built as a practical exercise to strengthen my frontend development skills and apply core JavaScript concepts through a real-world CRUD application.
 
-🎯 Project Goal 
+It helped me practice DOM manipulation, event handling, arrays, objects, functions, and browser storage.
 
-This project was built as a practical exercise to strengthen my frontend development skills and apply JavaScript concepts through a real-world CRUD application.
+----------
 
-Built with ❤️ using HTML, CSS & JavaScript. 
-
+Built with ❤️ using HTML, CSS & JavaScript.
