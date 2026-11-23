@@ -62,7 +62,7 @@ body{
     background-color: var(--bg_light);
     padding: 25px;
     border-radius: 20px;
-    border: 1px solid var(--border-color);
+    border: 1px solid;
     box-shadow:0 2px 8px rgba(37, 43, 39, 0.05);
     transition: 0.3s ease-out;
 } 

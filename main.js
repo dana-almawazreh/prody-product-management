@@ -8,6 +8,13 @@ let count = document.getElementById('count');
 let category = document.getElementById('category');
 let total = document.getElementById('total');
 let submit = document.getElementById('submit');
+let totalProducts = document.getElementById('totalProducts');
+let totalCategories = document.getElementById('totalCategories');
+let inventoryValue = document.getElementById('inventoryValue');
+let totalStock = document.getElementById('totalStock');
+
+
+
 
 
 let mood = 'create' ;
@@ -57,14 +64,7 @@ submit.onclick = function(){
         && price.value != '' && newPro.count < 100)
         {
     if(mood == 'create'){
-    if(newPro.count > 1){
-        for(let i=0 ; i< count.value ; i++){
-           proData.push(newPro); 
-        }
-    }
-    else{
-        proData.push(newPro);
-    }}
+     proData.push(newPro);}
     else {
         proData[index] = newPro;
         mood = 'create';
@@ -128,6 +128,7 @@ function readData(){
     else{
             deleteBtn.innerHTML='';
     }
+    updateDashboard();
 }
 
 readData();
@@ -257,6 +258,39 @@ function search(value){
 
 
                             /***********************************************/
+
+function updateDashboard(){
+    
+    totalProducts.innerHTML = proData.length;
+    let categories = [];
+
+    for(let i = 0; i < proData.length; i++){
+        if(!categories.includes(proData[i].category)){
+            categories.push(proData[i].category);
+        }
+    }
+
+    totalCategories.innerHTML = categories.length;
+
+
+    let stock = 0;
+
+    for(let i = 0; i < proData.length; i++){
+        stock += Number(proData[i].count);
+    }
+
+    totalStock.innerHTML = stock;
+
+
+    let value = 0;
+
+    for(let i = 0; i < proData.length; i++){
+        value += Number(proData[i].total) * Number(proData[i].count);
+    }
+
+    inventoryValue.innerHTML = '$' + value.toLocaleString();
+
+}
 
 
 
