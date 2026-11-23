@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> PRODY </title>
     <link rel="stylesheet" href="main.css">
-    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <!-- Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -59,13 +60,13 @@
             <div class="inputs">
                 <input type="text" id="nameOfproduct" placeholder=" Name Of Product ">
                 <div class="price">
-                    <input onkeyup="getTotal()" type="number" id="price" placeholder=" Price ">
-                    <input onkeyup="getTotal()" type="number" id="taxes" placeholder=" Taxes ">
-                    <input onkeyup="getTotal()" type="number" id="ads" placeholder=" Ads ">
-                    <input onkeyup="getTotal()" type="number" id="discount" placeholder=" Discount ">
+                    <input onkeyup="getTotal()" min="1" type="number" id="price" placeholder=" Price ">
+                    <input onkeyup="getTotal()" min="0" type="number" id="taxes" placeholder=" Taxes ">
+                    <input onkeyup="getTotal()" min="0" type="number" id="ads" placeholder=" Ads ">
+                    <input onkeyup="getTotal()" min="0" type="number" id="discount" placeholder=" Discount ">
                     <small id="total">  </small>
                 </div>
-                <input type="number" id="count" placeholder=" Number Of Products ">
+                <input type="number" id="count" min="1" step="1" placeholder=" Number Of Products ">
                 <input type="text" id="category" placeholder=" Name Of Category ">
                 <button id="submit"> Create </button>
             </div>

@@ -136,24 +136,78 @@ readData();
 
                             /***********************************************/
 function deleteData(i){
-    let confirmDelete = confirm('Are you sure you want to delete this product?');
-    if(confirmDelete){
-    proData.splice(i,1);
-    localStorage.product = JSON.stringify(proData);
-    readData();  }
-    }
+    Swal.fire({
+        title: "Are you sure?",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonText: "Yes, delete it!",
+        cancelButtonText: "No, cancel!",
+        reverseButtons: true
+    }).then((result) => {
+
+        if(result.isConfirmed){
+
+            proData.splice(i,1);
+
+            localStorage.setItem('product', JSON.stringify(proData));
+
+            readData();
+
+            Swal.fire({
+                title: "Deleted!",
+                text: "Product has been deleted successfully.",
+                icon: "success"
+            });
+
+        }
+        else if(result.dismiss === Swal.DismissReason.cancel){
+
+            Swal.fire({
+                title: "Cancelled",
+                text: "Your product is safe!",
+                icon: "error"
+            });
+
+        }
+
+    });
+}
 
 
 
                             /***********************************************/
 function deleteAll(){
-    let confirmDelete = confirm('Are you sure you want to delete this product?');
-    if(confirmDelete){
-        localStorage.removeItem('product');
-        proData.splice(0);
-        readData();  }
-    }
 
+    Swal.fire({
+        title: "Are you sure?",
+        text: "All products will be deleted permanently!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonText: "Yes, delete all!",
+        cancelButtonText: "No, cancel!",
+        reverseButtons: true
+    }).then((result) => {
+
+        if(result.isConfirmed){
+
+            localStorage.removeItem('product');
+
+            proData.splice(0);
+
+            readData();
+
+            Swal.fire({
+                title: "Deleted!",
+                text: "All products have been deleted.",
+                icon: "success"
+            });
+
+        }
+
+    });
+
+}
 
                             /***********************************************/
 function updateData(i){

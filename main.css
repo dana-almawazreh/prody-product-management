@@ -202,3 +202,28 @@ th,td{
     background:#85b28b ;
     cursor: pointer;
 }
+
+                          /* Swal2 Styles */
+.swal2-confirm {
+    background-color: var(--text_secondary) !important;
+    transition: 0.4s ease-out;
+}
+
+.swal2-confirm:hover {
+    background: var(--primary_light) !important;
+    scale: 1.02;
+}
+
+.swal2-cancel {
+    background-color: #dc5555 !important;
+    transition: 0.4s ease-out;
+}
+.swal2-cancel:hover {
+    background: #e27171 !important;
+    scale: 1.02;
+}
+
+.swal2-popup {
+    border-radius: 16px;
+    font-family: 'DM Sans', sans-serif;
+}
